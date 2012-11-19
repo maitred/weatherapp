@@ -2,7 +2,7 @@ import  pywapi, string
 imperial = False #Defaults to metric. Please don't change this. It would make me sad.
 while True:
     try:
-        line = input()
+        line = input()[len('weather'):].strip()
         print('looking up the weather for '+ str(line))
         
         if imperial:
@@ -14,4 +14,3 @@ while True:
    
     except:
             print('There was a problem with your request. Please try again. Make sure this is a US ZIP code.')
-    
